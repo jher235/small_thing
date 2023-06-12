@@ -20,24 +20,24 @@ int check(struct student a, struct student b);
 
 int main(void) {
 	struct student li[2];
-	struct date dt1, dt2;//¸Ş¸ğ¸® °ø°£ÇÒ´ç
-	li[0].dt = &dt1; // , ÁÖ¼Ò ÀúÀå
+	struct date dt1, dt2;//ë©”ëª¨ë¦¬ ê³µê°„í• ë‹¹
+	li[0].dt = &dt1; // , ì£¼ì†Œ ì €ì¥
 	li[1].dt = &dt2;
 
 	for (int i = 0; i < 2; i++) {
-		printf("¹øÈ£ÀÔ·Â:");
+		printf("ë²ˆí˜¸ì…ë ¥:");
 		scanf("%d", &li[i].number);
-		printf("ÀÌ¸§ ÀÔ·Â:");
+		printf("ì´ë¦„ ì…ë ¥:");
 		scanf("%s", li[i].name);
-		printf("¼ºÀû ÀÔ·Â:");
+		printf("ì„±ì  ì…ë ¥:");
 		scanf("%f", &li[i].grade);
-		printf("½ÃÀÛÀÏ ÀÔ·Â:");
+		printf("ì‹œì‘ì¼ ì…ë ¥:");
 		scanf("%d", &li[i].dt->start);		//&(*li[i].dt).start)
 	}
 
 
 	if (check(li[0], li[1]) ==1 )
-		printf("µ¿ÀÏÇÑ »ç¶÷ÀÔ´Ï´Ù\n");
+		printf("ë™ì¼í•œ ì‚¬ëŒì…ë‹ˆë‹¤\n");
 
 	return 0;
 }
