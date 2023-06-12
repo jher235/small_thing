@@ -26,13 +26,13 @@ int main(void) {
 	li[1].dt = &d[1];
 
 	for (int i = 0; i < 2; i++) {
-		printf("¹øÈ£ÀÔ·Â:");
+		printf("ë²ˆí˜¸ì…ë ¥:");
 		scanf("%d", &li[i].number);
-		printf("ÀÌ¸§ ÀÔ·Â:");
+		printf("ì´ë¦„ ì…ë ¥:");
 		scanf("%s", li[i].name);
-		printf("¼ºÀû ÀÔ·Â:");
+		printf("ì„±ì  ì…ë ¥:");
 		scanf("%f", &li[i].grade);
-		printf("½ÃÀÛÀÏ ÀÔ·Â:");
+		printf("ì‹œì‘ì¼ ì…ë ¥:");
 		scanf("%d", &li[i].dt->start);		//&(*li[i].dt).start)
 	}
 
@@ -40,7 +40,7 @@ int main(void) {
 	change(&li[0],&li[1]);
 
 	for (int i = 0; i < 2; i++)
-		printf("%d¹øÂ° %3d %3s %3f %3d\n", i, li[i].number, li[i].name, li[i].grade, li[i].dt->start);
+		printf("%dë²ˆì§¸ %3d %3s %3f %3d\n", i, li[i].number, li[i].name, li[i].grade, li[i].dt->start);
 
 	return 0;
 }
@@ -50,7 +50,7 @@ int main(void) {
 void change(struct student *a, struct student *b) {
 	
 
-	strcpy((*a).name, "¹Ù²ñ");
+	strcpy((*a).name, "ë°”ë€œ");
 	a->grade = 0;
 	a->number = 0;
 	a->dt->start = 0;
